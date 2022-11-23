@@ -1,0 +1,24 @@
+{
+  "name": "advent-of-code-js",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Mario Baez",
+  "license": "MIT",
+  "scripts": {
+    "transpile": "babel src --out-dir dist",
+    "aoc": "yarn transpile && node dist/index.js $DAY"
+  },
+  "dependencies": {
+    "node": "^19.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
