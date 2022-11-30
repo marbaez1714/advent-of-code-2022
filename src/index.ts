@@ -20,10 +20,15 @@ async function main() {
 
 async function executeDay(day: string) {
   const { partOne, partTwo } = require(`./day-${day}`);
+  const answerOne = await partOne();
+  const answerTwo = await partTwo();
 
-  console.info(`\n\n--------- Day - ${day} ---------`);
-  await partOne();
-  await partTwo();
+  console.info(`\n-------------------------------`);
+  console.info(`| DAY - ${day}`);
+  console.info(`-------------------------------`);
+  console.info(`| Part 1: ${answerOne}`);
+  console.info(`| Part 2: ${answerTwo}`);
+  console.info(`-------------------------------`);
 }
 
 main();
